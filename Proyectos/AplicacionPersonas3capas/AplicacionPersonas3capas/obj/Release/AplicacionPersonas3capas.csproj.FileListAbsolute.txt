@@ -1,0 +1,18 @@
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\AplicacionPersonas3capas.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\AplicacionPersonas3capas.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\DAOPersonas.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\DAOPersonas.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\obj\Release\AplicacionPersonas3capas.csprojResolveAssemblyReference.cache
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\obj\Release\AplicacionPersonas3capas.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\obj\Release\AplicacionPersonas3capas.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\DAOPersonasSQL.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\DAOPersonasSQL.pdb
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\AplicacionPersonas3capas.dll
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\AplicacionPersonas3capas.pdb
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\DAOPersonas.dll
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\DAOPersonasSQL.dll
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\DAOPersonasSQL.pdb
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\bin\DAOPersonas.pdb
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\obj\Release\AplicacionPersonas3capas.csprojResolveAssemblyReference.cache
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\obj\Release\AplicacionPersonas3capas.dll
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\AplicacionPersonas3capas\obj\Release\AplicacionPersonas3capas.pdb

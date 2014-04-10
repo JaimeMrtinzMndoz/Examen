@@ -1,0 +1,5 @@
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\HolaMundoMVC\TiendaRegalosMVC\bin\TiendaRegalosMVC.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\HolaMundoMVC\TiendaRegalosMVC\bin\TiendaRegalosMVC.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\HolaMundoMVC\TiendaRegalosMVC\obj\Release\TiendaRegalosMVC.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\HolaMundoMVC\TiendaRegalosMVC\obj\Release\TiendaRegalosMVC.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\HolaMundoMVC\TiendaRegalosMVC\obj\Release\TiendaRegalosMVC.csprojResolveAssemblyReference.cache

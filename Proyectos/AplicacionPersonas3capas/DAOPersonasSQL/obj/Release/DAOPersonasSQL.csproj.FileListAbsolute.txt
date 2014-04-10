@@ -1,0 +1,10 @@
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\DAOPersonasSQL\bin\Release\DAOPersonasSQL.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\DAOPersonasSQL\bin\Release\DAOPersonasSQL.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\DAOPersonasSQL\obj\Release\DAOPersonasSQL.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\DAOPersonasSQL\obj\Release\DAOPersonasSQL.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\AplicacionPersonas3capas\DAOPersonasSQL\obj\Release\DAOPersonasSQL.csprojResolveAssemblyReference.cache
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\DAOPersonasSQL\bin\Release\DAOPersonasSQL.dll
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\DAOPersonasSQL\bin\Release\DAOPersonasSQL.pdb
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\DAOPersonasSQL\obj\Release\DAOPersonasSQL.csprojResolveAssemblyReference.cache
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\DAOPersonasSQL\obj\Release\DAOPersonasSQL.dll
+J:\Modulo V - Frameworks de desarrollo Web\Proyectos\Proyectos\Proyectos\AplicacionPersonas3capas\DAOPersonasSQL\obj\Release\DAOPersonasSQL.pdb

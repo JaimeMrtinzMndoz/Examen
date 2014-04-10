@@ -1,0 +1,15 @@
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\HolaMundoMVC\MVCAccesoADatos\bin\MVCAccesoADatos.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\HolaMundoMVC\MVCAccesoADatos\bin\MVCAccesoADatos.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\HolaMundoMVC\MVCAccesoADatos\obj\Debug\MVCAccesoADatos.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\HolaMundoMVC\MVCAccesoADatos\obj\Debug\MVCAccesoADatos.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\HolaMundoMVC\MVCAccesoADatos\obj\Debug\MVCAccesoADatos.csprojResolveAssemblyReference.cache
+C:\Users\º\Documents\Proyectos\Proyectos\Proyectos\HolaMundoMVC\MVCAccesoADatos\bin\MVCAccesoADatos.dll
+C:\Users\º\Documents\Proyectos\Proyectos\Proyectos\HolaMundoMVC\MVCAccesoADatos\bin\MVCAccesoADatos.pdb
+C:\Users\º\Documents\Proyectos\Proyectos\Proyectos\HolaMundoMVC\MVCAccesoADatos\obj\Debug\MVCAccesoADatos.csprojResolveAssemblyReference.cache
+C:\Users\º\Documents\Proyectos\Proyectos\Proyectos\HolaMundoMVC\MVCAccesoADatos\obj\Debug\MVCAccesoADatos.dll
+C:\Users\º\Documents\Proyectos\Proyectos\Proyectos\HolaMundoMVC\MVCAccesoADatos\obj\Debug\MVCAccesoADatos.pdb
+C:\Users\º\Desktop\Proyectos\Proyectos\Proyectos\HolaMundoMVC\MVCAccesoADatos\bin\MVCAccesoADatos.dll
+C:\Users\º\Desktop\Proyectos\Proyectos\Proyectos\HolaMundoMVC\MVCAccesoADatos\bin\MVCAccesoADatos.pdb
+C:\Users\º\Desktop\Proyectos\Proyectos\Proyectos\HolaMundoMVC\MVCAccesoADatos\obj\Debug\MVCAccesoADatos.csprojResolveAssemblyReference.cache
+C:\Users\º\Desktop\Proyectos\Proyectos\Proyectos\HolaMundoMVC\MVCAccesoADatos\obj\Debug\MVCAccesoADatos.dll
+C:\Users\º\Desktop\Proyectos\Proyectos\Proyectos\HolaMundoMVC\MVCAccesoADatos\obj\Debug\MVCAccesoADatos.pdb

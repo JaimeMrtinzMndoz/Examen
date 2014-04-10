@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TiendaRegalos2014Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TiendaRegalos2014ModelStoreContainer">
+    <EntitySet Name="Categorias" EntityType="TiendaRegalos2014Model.Store.Categorias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Clientes" EntityType="TiendaRegalos2014Model.Store.Clientes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pedidos" EntityType="TiendaRegalos2014Model.Store.Pedidos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Regalos" EntityType="TiendaRegalos2014Model.Store.Regalos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegalosPedido" EntityType="TiendaRegalos2014Model.Store.RegalosPedido" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="TiendaRegalos2014Model.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Pedidos_Clientes" Association="TiendaRegalos2014Model.Store.FK_Pedidos_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Pedidos" EntitySet="Pedidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Regalos_Categorias" Association="TiendaRegalos2014Model.Store.FK_Regalos_Categorias">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="Regalos" EntitySet="Regalos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegalosPedido_Pedidos" Association="TiendaRegalos2014Model.Store.FK_RegalosPedido_Pedidos">
+      <End Role="Pedidos" EntitySet="Pedidos" />
+      <End Role="RegalosPedido" EntitySet="RegalosPedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegalosPedido_Regalos" Association="TiendaRegalos2014Model.Store.FK_RegalosPedido_Regalos">
+      <End Role="Regalos" EntitySet="Regalos" />
+      <End Role="RegalosPedido" EntitySet="RegalosPedido" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categorias">
+    <Key>
+      <PropertyRef Name="IdCategoria" />
+    </Key>
+    <Property Name="IdCategoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCategoria" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCliente" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Direccion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Ciudad" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Pedidos">
+    <Key>
+      <PropertyRef Name="IdPedido" />
+    </Key>
+    <Property Name="IdPedido" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaPedido" Type="datetime" Nullable="false" />
+    <Property Name="Importe" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="ClientesIdCliente" Type="int" Nullable="false" />
+    <Property Name="FechaEnvio" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Regalos">
+    <Key>
+      <PropertyRef Name="IdRegalo" />
+    </Key>
+    <Property Name="IdRegalo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreRegalo" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Precio" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Imagen" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoriasIdCategoria" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegalosPedido">
+    <Key>
+      <PropertyRef Name="PedidosIdPedido" />
+      <PropertyRef Name="RegalosIdRegalo" />
+    </Key>
+    <Property Name="PedidosIdPedido" Type="int" Nullable="false" />
+    <Property Name="RegalosIdRegalo" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contrasena" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Pedidos_Clientes">
+    <End Role="Clientes" Type="TiendaRegalos2014Model.Store.Clientes" Multiplicity="1" />
+    <End Role="Pedidos" Type="TiendaRegalos2014Model.Store.Pedidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Pedidos">
+        <PropertyRef Name="ClientesIdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Regalos_Categorias">
+    <End Role="Categorias" Type="TiendaRegalos2014Model.Store.Categorias" Multiplicity="1" />
+    <End Role="Regalos" Type="TiendaRegalos2014Model.Store.Regalos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="IdCategoria" />
+      </Principal>
+      <Dependent Role="Regalos">
+        <PropertyRef Name="CategoriasIdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegalosPedido_Pedidos">
+    <End Role="Pedidos" Type="TiendaRegalos2014Model.Store.Pedidos" Multiplicity="1" />
+    <End Role="RegalosPedido" Type="TiendaRegalos2014Model.Store.RegalosPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedidos">
+        <PropertyRef Name="IdPedido" />
+      </Principal>
+      <Dependent Role="RegalosPedido">
+        <PropertyRef Name="PedidosIdPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegalosPedido_Regalos">
+    <End Role="Regalos" Type="TiendaRegalos2014Model.Store.Regalos" Multiplicity="1" />
+    <End Role="RegalosPedido" Type="TiendaRegalos2014Model.Store.RegalosPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regalos">
+        <PropertyRef Name="IdRegalo" />
+      </Principal>
+      <Dependent Role="RegalosPedido">
+        <PropertyRef Name="RegalosIdRegalo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

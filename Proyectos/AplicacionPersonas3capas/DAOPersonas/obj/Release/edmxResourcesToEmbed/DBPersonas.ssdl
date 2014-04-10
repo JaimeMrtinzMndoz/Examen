@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBPersonas.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DBPersonasStoreContainer">
+    <EntitySet Name="Personas" EntityType="DBPersonas.Store.Personas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="DBPersonas.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Personas">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="NombrePersona" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Ciudad" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contrasena" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

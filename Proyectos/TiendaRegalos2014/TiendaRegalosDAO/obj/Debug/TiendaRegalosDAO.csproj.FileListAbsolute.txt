@@ -1,0 +1,5 @@
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\bin\Debug\TiendaRegalosDAO.dll.config
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\bin\Debug\TiendaRegalosDAO.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\bin\Debug\TiendaRegalosDAO.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\obj\Debug\TiendaRegalosDAO.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\obj\Debug\TiendaRegalosDAO.pdb

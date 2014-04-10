@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFB59524-1B67-4BC6-A0D0-D906A0080C5D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TiendaRegalos2014</RootNamespace>
+    <AssemblyName>TiendaRegalos2014</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Categorias.aspx" />
+    <Content Include="ConsultasVarias.aspx" />
+    <Content Include="EnviarPedidos.aspx" />
+    <Content Include="Errores.aspx" />
+    <Content Include="Imagenes\balonbaloncesto.jpg" />
+    <Content Include="Imagenes\balonfutbol.jpg" />
+    <Content Include="Imagenes\balonprincesas.jpg" />
+    <Content Include="Imagenes\barbie.jpg" />
+    <Content Include="Imagenes\bebe1.jpg" />
+    <Content Include="Imagenes\bebe2.jpg" />
+    <Content Include="Imagenes\bicicleta.jpg" />
+    <Content Include="Imagenes\carsdisney.jpg" />
+    <Content Include="Imagenes\casamuñecas.jpg" />
+    <Content Include="Imagenes\cocheantiguo.jpg" />
+    <Content Include="Imagenes\cochebomberos.jpg" />
+    <Content Include="Imagenes\guantebeisbol.jpg" />
+    <Content Include="Imagenes\motomadera.jpg" />
+    <Content Include="Imagenes\quad.jpg" />
+    <Content Include="Imagenes\raquetatenis.jpg" />
+    <Content Include="Imagenes\silletabebe.jpg" />
+    <Content Include="Imagenes\todoterreno.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="Maestra\images\blockbullets.png" />
+    <Content Include="Maestra\images\blockheader.png" />
+    <Content Include="Maestra\images\delicious1.png" />
+    <Content Include="Maestra\images\desconexion.png" />
+    <Content Include="Maestra\images\facebook1.png" />
+    <Content Include="Maestra\images\feed.png" />
+    <Content Include="Maestra\images\flickr1.png" />
+    <Content Include="Maestra\images\footer.png" />
+    <Content Include="Maestra\images\header.png" />
+    <Content Include="Maestra\images\myspace1.png" />
+    <Content Include="Maestra\images\nav.png" />
+    <Content Include="Maestra\images\object185698056.png" />
+    <Content Include="Maestra\images\object2139846273.png" />
+    <Content Include="Maestra\images\pageglare.png" />
+    <Content Include="Maestra\images\postbullets.png" />
+    <Content Include="Maestra\images\postemailicon.png" />
+    <Content Include="Maestra\images\postpdficon.png" />
+    <Content Include="Maestra\images\postprinticon.png" />
+    <Content Include="Maestra\images\postquote.png" />
+    <Content Include="Maestra\images\preloader-01.gif" />
+    <Content Include="Maestra\images\shutterstock_2883443.jpg" />
+    <Content Include="Maestra\images\spacer.gif" />
+    <Content Include="Maestra\images\template_preview.png" />
+    <Content Include="Maestra\images\toygifts1-2.png" />
+    <Content Include="Maestra\images\toygifts2-2.png" />
+    <Content Include="Maestra\images\toygifts3-2.png" />
+    <Content Include="Maestra\images\toygifts4-2.png" />
+    <Content Include="Maestra\style.css" />
+    <Content Include="Maestra\style.responsive.css" />
+    <Content Include="Regalos.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Categorias.aspx.cs">
+      <DependentUpon>Categorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categorias.aspx.designer.cs">
+      <DependentUpon>Categorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultasVarias.aspx.cs">
+      <DependentUpon>ConsultasVarias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultasVarias.aspx.designer.cs">
+      <DependentUpon>ConsultasVarias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnviarPedidos.aspx.cs">
+      <DependentUpon>EnviarPedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnviarPedidos.aspx.designer.cs">
+      <DependentUpon>EnviarPedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errores.aspx.cs">
+      <DependentUpon>Errores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errores.aspx.designer.cs">
+      <DependentUpon>Errores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestra\Maestra.Master.cs">
+      <DependentUpon>Maestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestra\Maestra.Master.designer.cs">
+      <DependentUpon>Maestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regalos.aspx.cs">
+      <DependentUpon>Regalos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Regalos.aspx.designer.cs">
+      <DependentUpon>Regalos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\TiendaMembershipProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Maestra\Maestra.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TiendaRegalosDAO\TiendaRegalosDAO.csproj">
+      <Project>{6A0BE805-12FC-47C4-B654-6E0F5C995511}</Project>
+      <Name>TiendaRegalosDAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50160</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

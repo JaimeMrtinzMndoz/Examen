@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionPersonas3capas", "AplicacionPersonas3capas\AplicacionPersonas3capas.csproj", "{EAFFC809-10C8-4D21-B151-C12F326E177B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOPersonas", "DAOPersonas\DAOPersonas.csproj", "{CDE6CB3E-B83B-4353-B781-98BF832F23F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOPersonasSQL", "DAOPersonasSQL\DAOPersonasSQL.csproj", "{D04FE7A1-4A99-4917-AA0E-030F548BEE5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAFFC809-10C8-4D21-B151-C12F326E177B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFFC809-10C8-4D21-B151-C12F326E177B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFFC809-10C8-4D21-B151-C12F326E177B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFFC809-10C8-4D21-B151-C12F326E177B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDE6CB3E-B83B-4353-B781-98BF832F23F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDE6CB3E-B83B-4353-B781-98BF832F23F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDE6CB3E-B83B-4353-B781-98BF832F23F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE6CB3E-B83B-4353-B781-98BF832F23F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D04FE7A1-4A99-4917-AA0E-030F548BEE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D04FE7A1-4A99-4917-AA0E-030F548BEE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D04FE7A1-4A99-4917-AA0E-030F548BEE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D04FE7A1-4A99-4917-AA0E-030F548BEE5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

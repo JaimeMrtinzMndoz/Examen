@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TiendaRegalos2014Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TiendaRegalos2014ModelStoreContainer">
+          <EntitySet Name="Categorias" EntityType="TiendaRegalos2014Model.Store.Categorias" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Clientes" EntityType="TiendaRegalos2014Model.Store.Clientes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pedidos" EntityType="TiendaRegalos2014Model.Store.Pedidos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Regalos" EntityType="TiendaRegalos2014Model.Store.Regalos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RegalosPedido" EntityType="TiendaRegalos2014Model.Store.RegalosPedido" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuarios" EntityType="TiendaRegalos2014Model.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Pedidos_Clientes" Association="TiendaRegalos2014Model.Store.FK_Pedidos_Clientes">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Pedidos" EntitySet="Pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Regalos_Categorias" Association="TiendaRegalos2014Model.Store.FK_Regalos_Categorias">
+            <End Role="Categorias" EntitySet="Categorias" />
+            <End Role="Regalos" EntitySet="Regalos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegalosPedido_Pedidos" Association="TiendaRegalos2014Model.Store.FK_RegalosPedido_Pedidos">
+            <End Role="Pedidos" EntitySet="Pedidos" />
+            <End Role="RegalosPedido" EntitySet="RegalosPedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegalosPedido_Regalos" Association="TiendaRegalos2014Model.Store.FK_RegalosPedido_Regalos">
+            <End Role="Regalos" EntitySet="Regalos" />
+            <End Role="RegalosPedido" EntitySet="RegalosPedido" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categorias">
+          <Key>
+            <PropertyRef Name="IdCategoria" />
+          </Key>
+          <Property Name="IdCategoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCategoria" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCliente" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Direccion" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Ciudad" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Pedidos">
+          <Key>
+            <PropertyRef Name="IdPedido" />
+          </Key>
+          <Property Name="IdPedido" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FechaPedido" Type="datetime" Nullable="false" />
+          <Property Name="Importe" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="ClientesIdCliente" Type="int" Nullable="false" />
+          <Property Name="FechaEnvio" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Regalos">
+          <Key>
+            <PropertyRef Name="IdRegalo" />
+          </Key>
+          <Property Name="IdRegalo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NombreRegalo" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Precio" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="Imagen" Type="nvarchar" MaxLength="50" />
+          <Property Name="CategoriasIdCategoria" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RegalosPedido">
+          <Key>
+            <PropertyRef Name="PedidosIdPedido" />
+            <PropertyRef Name="RegalosIdRegalo" />
+          </Key>
+          <Property Name="PedidosIdPedido" Type="int" Nullable="false" />
+          <Property Name="RegalosIdRegalo" Type="int" Nullable="false" />
+          <Property Name="Cantidad" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+          <Property Name="Contrasena" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Pedidos_Clientes">
+          <End Role="Clientes" Type="TiendaRegalos2014Model.Store.Clientes" Multiplicity="1" />
+          <End Role="Pedidos" Type="TiendaRegalos2014Model.Store.Pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="IdCliente" />
+            </Principal>
+            <Dependent Role="Pedidos">
+              <PropertyRef Name="ClientesIdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Regalos_Categorias">
+          <End Role="Categorias" Type="TiendaRegalos2014Model.Store.Categorias" Multiplicity="1" />
+          <End Role="Regalos" Type="TiendaRegalos2014Model.Store.Regalos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorias">
+              <PropertyRef Name="IdCategoria" />
+            </Principal>
+            <Dependent Role="Regalos">
+              <PropertyRef Name="CategoriasIdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegalosPedido_Pedidos">
+          <End Role="Pedidos" Type="TiendaRegalos2014Model.Store.Pedidos" Multiplicity="1" />
+          <End Role="RegalosPedido" Type="TiendaRegalos2014Model.Store.RegalosPedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pedidos">
+              <PropertyRef Name="IdPedido" />
+            </Principal>
+            <Dependent Role="RegalosPedido">
+              <PropertyRef Name="PedidosIdPedido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegalosPedido_Regalos">
+          <End Role="Regalos" Type="TiendaRegalos2014Model.Store.Regalos" Multiplicity="1" />
+          <End Role="RegalosPedido" Type="TiendaRegalos2014Model.Store.RegalosPedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regalos">
+              <PropertyRef Name="IdRegalo" />
+            </Principal>
+            <Dependent Role="RegalosPedido">
+              <PropertyRef Name="RegalosIdRegalo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TiendaRegalosModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TiendaRegalosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categorias" EntityType="TiendaRegalosModel.Categoria" />
+          <EntitySet Name="Clientes" EntityType="TiendaRegalosModel.Cliente" />
+          <EntitySet Name="Pedidos" EntityType="TiendaRegalosModel.Pedido" />
+          <EntitySet Name="Regalos" EntityType="TiendaRegalosModel.Regalo" />
+          <EntitySet Name="RegalosPedido" EntityType="TiendaRegalosModel.RegaloPedido" />
+          <AssociationSet Name="FK_Regalos_Categorias" Association="TiendaRegalosModel.FK_Regalos_Categorias">
+            <End Role="Categorias" EntitySet="Categorias" />
+            <End Role="Regalos" EntitySet="Regalos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pedidos_Clientes" Association="TiendaRegalosModel.FK_Pedidos_Clientes">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Pedidos" EntitySet="Pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegalosPedido_Pedidos" Association="TiendaRegalosModel.FK_RegalosPedido_Pedidos">
+            <End Role="Pedidos" EntitySet="Pedidos" />
+            <End Role="RegalosPedido" EntitySet="RegalosPedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegalosPedido_Regalos" Association="TiendaRegalosModel.FK_RegalosPedido_Regalos">
+            <End Role="Regalos" EntitySet="Regalos" />
+            <End Role="RegalosPedido" EntitySet="RegalosPedido" />
+          </AssociationSet>
+          <EntitySet Name="Usuarios" EntityType="TiendaRegalosModel.Usuario" />
+        </EntityContainer>
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="IdCategoria" />
+          </Key>
+          <Property Name="IdCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCategoria" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Regalos" Relationship="TiendaRegalosModel.FK_Regalos_Categorias" FromRole="Categorias" ToRole="Regalos" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCliente" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Direccion" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Ciudad" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Pedidos" Relationship="TiendaRegalosModel.FK_Pedidos_Clientes" FromRole="Clientes" ToRole="Pedidos" />
+        </EntityType>
+        <EntityType Name="Pedido">
+          <Key>
+            <PropertyRef Name="IdPedido" />
+          </Key>
+          <Property Name="IdPedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaPedido" Type="DateTime" Nullable="false" />
+          <Property Name="Importe" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="ClientesIdCliente" Type="Int32" Nullable="false" />
+          <Property Name="FechaEnvio" Type="DateTime" />
+          <NavigationProperty Name="Clientes" Relationship="TiendaRegalosModel.FK_Pedidos_Clientes" FromRole="Pedidos" ToRole="Clientes" />
+          <NavigationProperty Name="RegalosPedido" Relationship="TiendaRegalosModel.FK_RegalosPedido_Pedidos" FromRole="Pedidos" ToRole="RegalosPedido" />
+        </EntityType>
+        <EntityType Name="Regalo">
+          <Key>
+            <PropertyRef Name="IdRegalo" />
+          </Key>
+          <Property Name="IdRegalo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreRegalo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Precio" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Imagen" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CategoriasIdCategoria" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Categorias" Relationship="TiendaRegalosModel.FK_Regalos_Categorias" FromRole="Regalos" ToRole="Categorias" />
+          <NavigationProperty Name="RegalosPedido" Relationship="TiendaRegalosModel.FK_RegalosPedido_Regalos" FromRole="Regalos" ToRole="RegalosPedido" />
+        </EntityType>
+        <EntityType Name="RegaloPedido">
+          <Key>
+            <PropertyRef Name="PedidosIdPedido" />
+            <PropertyRef Name="RegalosIdRegalo" />
+          </Key>
+          <Property Name="PedidosIdPedido" Type="Int32" Nullable="false" />
+          <Property Name="RegalosIdRegalo" Type="Int32" Nullable="false" />
+          <Property Name="Cantidad" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Pedidos" Relationship="TiendaRegalosModel.FK_RegalosPedido_Pedidos" FromRole="RegalosPedido" ToRole="Pedidos" />
+          <NavigationProperty Name="Regalos" Relationship="TiendaRegalosModel.FK_RegalosPedido_Regalos" FromRole="RegalosPedido" ToRole="Regalos" />
+        </EntityType>
+        <Association Name="FK_Regalos_Categorias">
+          <End Role="Categorias" Type="TiendaRegalosModel.Categoria" Multiplicity="1" />
+          <End Role="Regalos" Type="TiendaRegalosModel.Regalo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorias">
+              <PropertyRef Name="IdCategoria" />
+            </Principal>
+            <Dependent Role="Regalos">
+              <PropertyRef Name="CategoriasIdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pedidos_Clientes">
+          <End Role="Clientes" Type="TiendaRegalosModel.Cliente" Multiplicity="1" />
+          <End Role="Pedidos" Type="TiendaRegalosModel.Pedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="IdCliente" />
+            </Principal>
+            <Dependent Role="Pedidos">
+              <PropertyRef Name="ClientesIdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegalosPedido_Pedidos">
+          <End Role="Pedidos" Type="TiendaRegalosModel.Pedido" Multiplicity="1" />
+          <End Role="RegalosPedido" Type="TiendaRegalosModel.RegaloPedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pedidos">
+              <PropertyRef Name="IdPedido" />
+            </Principal>
+            <Dependent Role="RegalosPedido">
+              <PropertyRef Name="PedidosIdPedido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegalosPedido_Regalos">
+          <End Role="Regalos" Type="TiendaRegalosModel.Regalo" Multiplicity="1" />
+          <End Role="RegalosPedido" Type="TiendaRegalosModel.RegaloPedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regalos">
+              <PropertyRef Name="IdRegalo" />
+            </Principal>
+            <Dependent Role="RegalosPedido">
+              <PropertyRef Name="RegalosIdRegalo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Contrasena" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TiendaRegalos2014ModelStoreContainer" CdmEntityContainer="TiendaRegalosEntities">
+          <EntitySetMapping Name="Categorias">
+            <EntityTypeMapping TypeName="TiendaRegalosModel.Categoria">
+              <MappingFragment StoreEntitySet="Categorias">
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clientes">
+            <EntityTypeMapping TypeName="TiendaRegalosModel.Cliente">
+              <MappingFragment StoreEntitySet="Clientes">
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pedidos">
+            <EntityTypeMapping TypeName="TiendaRegalosModel.Pedido">
+              <MappingFragment StoreEntitySet="Pedidos">
+                <ScalarProperty Name="IdPedido" ColumnName="IdPedido" />
+                <ScalarProperty Name="FechaPedido" ColumnName="FechaPedido" />
+                <ScalarProperty Name="Importe" ColumnName="Importe" />
+                <ScalarProperty Name="ClientesIdCliente" ColumnName="ClientesIdCliente" />
+                <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Regalos">
+            <EntityTypeMapping TypeName="TiendaRegalosModel.Regalo">
+              <MappingFragment StoreEntitySet="Regalos">
+                <ScalarProperty Name="IdRegalo" ColumnName="IdRegalo" />
+                <ScalarProperty Name="NombreRegalo" ColumnName="NombreRegalo" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="CategoriasIdCategoria" ColumnName="CategoriasIdCategoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegalosPedido">
+            <EntityTypeMapping TypeName="TiendaRegalosModel.RegaloPedido">
+              <MappingFragment StoreEntitySet="RegalosPedido">
+                <ScalarProperty Name="PedidosIdPedido" ColumnName="PedidosIdPedido" />
+                <ScalarProperty Name="RegalosIdRegalo" ColumnName="RegalosIdRegalo" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="TiendaRegalosModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="TiendaRegalos" ZoomLevel="86">
+        <EntityTypeShape EntityType="TiendaRegalosModel.Categoria" Width="1.5" PointX="4.125" PointY="4.125" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaRegalosModel.Cliente" Width="1.5" PointX="0.75" PointY="1" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaRegalosModel.Pedido" Width="1.5" PointX="3" PointY="1" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaRegalosModel.Regalo" Width="1.5" PointX="7.25" PointY="3.75" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaRegalosModel.RegaloPedido" Width="1.5" PointX="5.25" PointY="1.125" Height="1.9802864583333317" IsExpanded="true" />
+        <AssociationConnector Association="TiendaRegalosModel.FK_Regalos_Categorias" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.625" PointY="4.922841796875" />
+          <ConnectorPoint PointX="7.25" PointY="4.922841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="TiendaRegalosModel.FK_Pedidos_Clientes" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.0862939453125" />
+          <ConnectorPoint PointX="3" PointY="2.0862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="TiendaRegalosModel.FK_RegalosPedido_Pedidos" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="2.1151432291666659" />
+          <ConnectorPoint PointX="5.25" PointY="2.1151432291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="TiendaRegalosModel.FK_RegalosPedido_Regalos" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="3.75" />
+          <ConnectorPoint PointX="6.75" PointY="3.1052864583333317" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TiendaRegalosModel.Usuario" Width="1.5" PointX="0.75" PointY="4.75" Height="1.5956835937499996" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

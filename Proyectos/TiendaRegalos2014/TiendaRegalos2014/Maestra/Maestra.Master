@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Maestra.master.cs" Inherits="TiendaRegalos2014.Maestra" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Tienda de Regalos</title>
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="style.css" media="screen"/>
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="style.responsive.css" media="all"/>
+
+    <style>.art-content .art-postcontent-0 .layout-item-0 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-width:3px;border-color:#B1770B; border-spacing: 0px 10px; border-collapse: separate;  }
+    .art-content .art-postcontent-0 .layout-item-1 { border-right-style:solid;border-right-width:2px;border-right-color:#FCC01D; color: #922517; padding: 10px;  }
+    .art-content .art-postcontent-0 .layout-item-2 { color: #922517; padding: 10px;  }
+    .art-content .art-postcontent-0 .layout-item-3 { padding: 20px;  }
+    .ie7 .post .layout-cell {border:none !important; padding:0 !important; }
+    .ie6 .post .layout-cell {border:none !important; padding:0 !important; }
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 170px;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="CphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+     <div id="art-main">
+     <nav class="art-nav clearfix">       
+        <div id="DivMenu" runat="server" class="art-nav-inner">
+            <ul class="art-hmenu" id="MenuAdministrador" runat="server"><li><asp:HyperLink ID="linkCategorias" runat="server" NavigateUrl="~/Categorias.aspx">Tabla Categorias</asp:HyperLink></li><li><asp:HyperLink ID="linkRegalos" runat="server" NavigateUrl="~/Regalos.aspx">Tabla Regalos</asp:HyperLink></li><li><asp:HyperLink ID="linkPedidos" runat="server" NavigateUrl="~/EnviarPedidos.aspx">Enviar pedidos</asp:HyperLink></li><li><asp:HyperLink ID="linkConsultas" runat="server" NavigateUrl="~/ConsultasVarias.aspx">Consultas varias</asp:HyperLink></li></ul> 
+        </div>
+     </nav>
+     <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+     <br />
+     <asp:LinkButton ID="lnkCerrarSesion" runat="server" 
+           onclick="lnkCerrarSesion_Click">Cerrar sesión</asp:LinkButton>
+     <br />
+      
+    <br />
+    <header class="art-header clearfix">
+        <div class="art-shapes">
+            <div class="art-object185698056" data-left="0.94%"></div>
+            <div class="art-object2139846273" data-left="100%"></div>
+        </div>
+    </header>
+   
+    <div class="art-sheet clearfix">
+        <div class="art-layout-wrapper clearfix">
+            <div class="art-content-layout">
+                <div class="art-content-layout-row">
+                    <div class="art-layout-cell art-content clearfix"><article class="art-post art-article">
+                            <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout layout-item-0" id="central-block">
+                                    <div class="art-content-layout-row">
+
+                                    </div>
+                                </div>
+                                <div class="art-content-layout">
+                                    <div class="art-content-layout-row">
+                                        <div class="art-layout-cell layout-item-3" style="width: 100%" >
+                                            
+                                                <div>
+                                                    <asp:ContentPlaceHolder ID="CphBody" runat="server">
+                                                    </asp:ContentPlaceHolder>
+                                                </div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="art-footer clearfix">
+        <p class="art-page-footer">
+            <span id="art-footnote-links">Copyright © 2014</span>
+        </p>
+    </footer>
+    </div>
+</form> 
+</body>
+
+</html>

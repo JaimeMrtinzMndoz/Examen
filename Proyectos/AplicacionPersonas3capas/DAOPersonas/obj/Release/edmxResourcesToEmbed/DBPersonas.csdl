@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DBPersonas" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="DBPersonasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Personas" EntityType="DBPersonas.Persona" />
+    <EntitySet Name="Usuarios" EntityType="DBPersonas.Usuario" />
+  </EntityContainer>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Type="Int32" Name="IdPersona" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Type="String" Name="NombrePersona" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ciudad" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Nombre" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Contrasena" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

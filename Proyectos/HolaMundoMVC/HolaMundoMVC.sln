@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolaMundoMVC", "HolaMundoMVC\HolaMundoMVC.csproj", "{1CFAC0B0-FA53-4C6F-85FA-EE66E7036861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAccesoADatos", "MVCAccesoADatos\MVCAccesoADatos.csproj", "{7DA1935B-C010-45AA-A395-DBE6807A9E8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaRegalosMVC", "TiendaRegalosMVC\TiendaRegalosMVC.csproj", "{BB6D1140-1849-44EE-9BC3-E99EFC17B143}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CFAC0B0-FA53-4C6F-85FA-EE66E7036861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFAC0B0-FA53-4C6F-85FA-EE66E7036861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFAC0B0-FA53-4C6F-85FA-EE66E7036861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFAC0B0-FA53-4C6F-85FA-EE66E7036861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DA1935B-C010-45AA-A395-DBE6807A9E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA1935B-C010-45AA-A395-DBE6807A9E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA1935B-C010-45AA-A395-DBE6807A9E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA1935B-C010-45AA-A395-DBE6807A9E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB6D1140-1849-44EE-9BC3-E99EFC17B143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB6D1140-1849-44EE-9BC3-E99EFC17B143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB6D1140-1849-44EE-9BC3-E99EFC17B143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB6D1140-1849-44EE-9BC3-E99EFC17B143}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

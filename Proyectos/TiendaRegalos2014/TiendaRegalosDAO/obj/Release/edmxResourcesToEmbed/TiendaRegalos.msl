@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TiendaRegalos2014ModelStoreContainer" CdmEntityContainer="TiendaRegalosEntities">
+    <EntitySetMapping Name="Categorias">
+      <EntityTypeMapping TypeName="TiendaRegalosModel.Categoria">
+        <MappingFragment StoreEntitySet="Categorias">
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="TiendaRegalosModel.Cliente">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pedidos">
+      <EntityTypeMapping TypeName="TiendaRegalosModel.Pedido">
+        <MappingFragment StoreEntitySet="Pedidos">
+          <ScalarProperty Name="IdPedido" ColumnName="IdPedido" />
+          <ScalarProperty Name="FechaPedido" ColumnName="FechaPedido" />
+          <ScalarProperty Name="Importe" ColumnName="Importe" />
+          <ScalarProperty Name="ClientesIdCliente" ColumnName="ClientesIdCliente" />
+          <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regalos">
+      <EntityTypeMapping TypeName="TiendaRegalosModel.Regalo">
+        <MappingFragment StoreEntitySet="Regalos">
+          <ScalarProperty Name="IdRegalo" ColumnName="IdRegalo" />
+          <ScalarProperty Name="NombreRegalo" ColumnName="NombreRegalo" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="CategoriasIdCategoria" ColumnName="CategoriasIdCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegalosPedido">
+      <EntityTypeMapping TypeName="TiendaRegalosModel.RegaloPedido">
+        <MappingFragment StoreEntitySet="RegalosPedido">
+          <ScalarProperty Name="PedidosIdPedido" ColumnName="PedidosIdPedido" />
+          <ScalarProperty Name="RegalosIdRegalo" ColumnName="RegalosIdRegalo" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="TiendaRegalosModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

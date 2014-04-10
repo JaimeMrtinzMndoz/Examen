@@ -1,0 +1,6 @@
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\bin\Release\TiendaRegalosDAO.dll.config
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\bin\Release\TiendaRegalosDAO.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\bin\Release\TiendaRegalosDAO.pdb
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\obj\Release\TiendaRegalosDAO.csprojResolveAssemblyReference.cache
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\obj\Release\TiendaRegalosDAO.dll
+C:\Users\Luky\Trabajo\Curso Desarrollo web 2014\Módulo Frameworks de desarrollo Web\Proyectos\TiendaRegalos2014\TiendaRegalosDAO\obj\Release\TiendaRegalosDAO.pdb
